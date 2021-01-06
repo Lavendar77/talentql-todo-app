@@ -5,7 +5,7 @@ This is an API-based TODO application where a user can manage his/her todo list.
 ## Features 🏁
 1. Authentication.
 2. Management of Todo items.
-3. Updating the status of todo items (**to do** / **doing** / **done**) .
+3. Updating the status of todo items (**to do** / **doing** / **done**).
 
 ## Installation 🚀
 1. Clone the repo
@@ -19,9 +19,16 @@ This is an API-based TODO application where a user can manage his/her todo list.
    - Find `DB_*` and configure the database you used:
      - DB_NAME - database name you created
      - *You know the rest...*
+3. Run the migrations
+   `php artisan migrate`
 
 # Reviewing work 💨
 1. Run `php artisan serve`
 2. Open the [API Documentation](https://documenter.getpostman.com/view/7154640/TVzLpgCF)
+
+# References 🗒
+#### Database Design
+[Click here to open the design](https://dbdiagram.io/d/5ff630c280d742080a35543f)
+![Database design](public/app-designs/database-design.png)
 
 Gracias! 🧘‍♂️
