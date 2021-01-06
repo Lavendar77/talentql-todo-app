@@ -2,9 +2,7 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpFoundation\Response;
@@ -66,6 +64,10 @@ class Handler extends ExceptionHandler
                 'message' => $e->getMessage(),
                 'data' => null
             ], Response::HTTP_FORBIDDEN);
+        });
+
+        $this->renderable(function (ValidationException $e) {
+            throw new MyValidationException($e);
         });
     }
 }
